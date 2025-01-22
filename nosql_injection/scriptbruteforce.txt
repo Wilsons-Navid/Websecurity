@@ -1,0 +1,1 @@
+python3 nosqlPasswordBrute.py --host 10.10.88.127 --user pedr
