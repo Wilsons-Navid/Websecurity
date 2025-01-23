@@ -1,0 +1,4 @@
+['username'=>['$ne'=>'xxxx'], 'password'=>['$ne'=>'yyyy']]
+['username'=>['$nin'=>['admin'] ], 'password'=>['$ne'=>'aweasdf']]
+['username'=>['$nin'=>['admin', 'jude'] ], 'password'=>['$ne'=>'aweasdf']]
+^.{7}$

